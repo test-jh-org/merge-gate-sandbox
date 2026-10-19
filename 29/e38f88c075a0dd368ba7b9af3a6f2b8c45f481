@@ -1,0 +1,19 @@
+smoke-1.txt
+  s_b37d95800b79e1::t_5528bea9b79c29 3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "29e38f88c075a0dd368ba7b9af3a6f2b8c45f481",
+  "prompts": {},
+  "sessions": {
+    "s_b37d95800b79e1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_b37d95800b79e1",
+        "model": "unknown"
+      },
+      "human_author": "JiaHeng <5684003+jiaheng@users.noreply.github.com>"
+    }
+  }
+}
