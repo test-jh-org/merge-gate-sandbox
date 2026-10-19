@@ -1,0 +1,19 @@
+.github/workflows/pr-auto-review.yml
+  s_1cbc2622cb47e1::t_00a080aef493f8 1-30
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9c14601a37ea95e81ca0fd0110b12c6a556037cb",
+  "prompts": {},
+  "sessions": {
+    "s_1cbc2622cb47e1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7247b37d-7809-4df9-8d8d-4bb8fef8091d",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "JiaHeng <5684003+jiaheng@users.noreply.github.com>"
+    }
+  }
+}
