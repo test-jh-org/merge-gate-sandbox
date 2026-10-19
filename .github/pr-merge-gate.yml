@@ -1,0 +1,3 @@
+# pr-merge-gate policy for local testing. The gate reads this from the default branch.
+enabled: true
+mode: dry-run
