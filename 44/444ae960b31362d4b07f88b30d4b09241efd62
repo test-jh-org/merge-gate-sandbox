@@ -1,0 +1,19 @@
+smoke-1.txt
+  s_d41f747b2bf4e1::t_0e60c1e2576395 2
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "44444ae960b31362d4b07f88b30d4b09241efd62",
+  "prompts": {},
+  "sessions": {
+    "s_d41f747b2bf4e1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_d41f747b2bf4e1",
+        "model": "unknown"
+      },
+      "human_author": "JiaHeng <5684003+jiaheng@users.noreply.github.com>"
+    }
+  }
+}
