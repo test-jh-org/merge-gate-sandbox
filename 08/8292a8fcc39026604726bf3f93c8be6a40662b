@@ -1,0 +1,23 @@
+.github/pr-merge-gate.yml
+  s_1cbc2622cb47e1::t_553ae5220563f7 1-3
+.github/workflows/ci.yaml
+  s_1cbc2622cb47e1::t_37dfdd71799eaa 1-12
+README.md
+  s_1cbc2622cb47e1::t_855c005973b142 1-10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "088292a8fcc39026604726bf3f93c8be6a40662b",
+  "prompts": {},
+  "sessions": {
+    "s_1cbc2622cb47e1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7247b37d-7809-4df9-8d8d-4bb8fef8091d",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "JiaHeng <5684003+jiaheng@users.noreply.github.com>"
+    }
+  }
+}
