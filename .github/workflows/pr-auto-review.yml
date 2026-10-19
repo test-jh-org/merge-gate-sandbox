@@ -1,0 +1,30 @@
+# Stand-in for the real AI review workflow. It posts the review marker that
+# pr-merge-gate rules R1 and R2 look for: a comment by github-actions[bot]
+# carrying the head SHA, verdict and risk, plus a link to this run.
+#
+# Add the label "review-reject" to a PR to get verdict=REQUEST_CHANGES instead.
+name: pr-auto-review
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review, labeled, unlabeled]
+permissions:
+  contents: read
+  pull-requests: write
+jobs:
+  review:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post review marker
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ github.event.pull_request.number }}
+          SHA: ${{ github.event.pull_request.head.sha }}
+          VERDICT: ${{ contains(github.event.pull_request.labels.*.name, 'review-reject') && 'REQUEST_CHANGES' || 'APPROVE' }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          gh pr comment "$PR" -R "$GITHUB_REPOSITORY" --body "Automated review (sandbox stub): **$VERDICT**, risk LOW.
+
+          Run: $RUN_URL
+
+          <!-- pr-review:sha=$SHA verdict=$VERDICT risk=LOW -->"
