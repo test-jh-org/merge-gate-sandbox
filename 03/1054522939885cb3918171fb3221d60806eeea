@@ -1,0 +1,19 @@
+.github/pr-merge-gate.yml
+  s_ca294159459c4c::t_88386b214a05c1 3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "031054522939885cb3918171fb3221d60806eeea",
+  "prompts": {},
+  "sessions": {
+    "s_ca294159459c4c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_ca294159459c4c",
+        "model": "unknown"
+      },
+      "human_author": "JiaHeng <5684003+jiaheng@users.noreply.github.com>"
+    }
+  }
+}
