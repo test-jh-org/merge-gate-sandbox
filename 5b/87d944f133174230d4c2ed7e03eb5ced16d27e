@@ -1,0 +1,19 @@
+CODEOWNERS
+  s_706699a3ba3c06::t_7509df5fd9d720 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "5b87d944f133174230d4c2ed7e03eb5ced16d27e",
+  "prompts": {},
+  "sessions": {
+    "s_706699a3ba3c06": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_706699a3ba3c06",
+        "model": "unknown"
+      },
+      "human_author": "JiaHeng <5684003+jiaheng@users.noreply.github.com>"
+    }
+  }
+}
