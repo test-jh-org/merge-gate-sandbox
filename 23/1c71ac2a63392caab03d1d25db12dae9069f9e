@@ -1,0 +1,19 @@
+tests/t2a-comment.txt
+  s_081aa489aac739::t_eed9412d390d93 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "231c71ac2a63392caab03d1d25db12dae9069f9e",
+  "prompts": {},
+  "sessions": {
+    "s_081aa489aac739": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_081aa489aac739",
+        "model": "unknown"
+      },
+      "human_author": "JiaHeng <5684003+jiaheng@users.noreply.github.com>"
+    }
+  }
+}
