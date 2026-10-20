@@ -1,0 +1,19 @@
+tests/t1-happy.txt
+  s_144bc80dd990be::t_966f32be36a422 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "fc22673c19e211e31f1e16e3340e1b641a010b1c",
+  "prompts": {},
+  "sessions": {
+    "s_144bc80dd990be": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_144bc80dd990be",
+        "model": "unknown"
+      },
+      "human_author": "JiaHeng <5684003+jiaheng@users.noreply.github.com>"
+    }
+  }
+}
