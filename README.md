@@ -12,8 +12,8 @@ organisation rulesets:
 - `.github/workflows/ci.yaml` is the required `ci` check, in a separate `build-pr` ruleset with no
   bypass. Label a pull request `ci-fail` to make it fail.
 - `.github/workflows/pr-auto-review.yml` stands in for the AI review and posts the review marker.
-  Labels `review-reject`, `review-risk-medium`, `review-legacy` and `review-skip` change what it
-  posts.
+  Labels `review-reject` (verdict `COMMENT`), `review-request-changes` (verdict `REQUEST_CHANGES`,
+  outside the spec), `review-risk-medium`, `review-legacy` and `review-skip` change what it posts.
 - `.github/pr-merge-gate.yml` enables the gate in merge mode.
 
 Pull requests opened here are test fixtures; close them when done.

@@ -3,7 +3,8 @@
 # verdict and risk, plus a link to this run.
 #
 # Labels steer the outcome, for testing:
-#   review-reject       verdict=REQUEST_CHANGES
+#   review-reject           verdict=COMMENT, the spec's not-approved verdict (SPEC section 6)
+#   review-request-changes  verdict=REQUEST_CHANGES, outside the spec, to test unknown verdicts
 #   review-risk-medium  risk=MEDIUM (above the default max_risk LOW)
 #   review-legacy       the marker the real action stamps today: sha only, no verdict or risk
 #   review-skip         no marker at all
@@ -25,7 +26,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           PR: ${{ github.event.pull_request.number }}
           SHA: ${{ github.event.pull_request.head.sha }}
-          VERDICT: ${{ contains(github.event.pull_request.labels.*.name, 'review-reject') && 'REQUEST_CHANGES' || 'APPROVE' }}
+          VERDICT: ${{ contains(github.event.pull_request.labels.*.name, 'review-request-changes') && 'REQUEST_CHANGES' || contains(github.event.pull_request.labels.*.name, 'review-reject') && 'COMMENT' || 'APPROVE' }}
           RISK: ${{ contains(github.event.pull_request.labels.*.name, 'review-risk-medium') && 'MEDIUM' || 'LOW' }}
           LEGACY: ${{ contains(github.event.pull_request.labels.*.name, 'review-legacy') }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
