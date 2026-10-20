@@ -1,0 +1,19 @@
+tests/t4-legacy.txt
+  s_796e0348d72250::t_ff40c108805038 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "516928f598482648dccef4bad8500e75ccc7cb2b",
+  "prompts": {},
+  "sessions": {
+    "s_796e0348d72250": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_796e0348d72250",
+        "model": "unknown"
+      },
+      "human_author": "JiaHeng <5684003+jiaheng@users.noreply.github.com>"
+    }
+  }
+}
