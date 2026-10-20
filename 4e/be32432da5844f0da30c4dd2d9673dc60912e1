@@ -1,0 +1,19 @@
+tests/t6-cifail.txt
+  s_849fccfded138a::t_f66830554ae5d9 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "4ebe32432da5844f0da30c4dd2d9673dc60912e1",
+  "prompts": {},
+  "sessions": {
+    "s_849fccfded138a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_849fccfded138a",
+        "model": "unknown"
+      },
+      "human_author": "JiaHeng <5684003+jiaheng@users.noreply.github.com>"
+    }
+  }
+}
