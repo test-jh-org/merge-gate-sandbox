@@ -1,6 +1,7 @@
 name: ci
 on:
   pull_request:
+    types: [opened, synchronize, reopened, labeled, unlabeled]
   push:
     branches: [main]
 permissions:
@@ -9,4 +10,9 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     steps:
+      # Label a pull request "ci-fail" to make this required check fail (gate rule R3).
+      - if: contains(github.event.pull_request.labels.*.name, 'ci-fail')
+        run: |
+          echo "ci-fail label present"
+          exit 1
       - run: echo "ok"
