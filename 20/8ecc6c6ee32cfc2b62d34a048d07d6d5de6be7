@@ -1,0 +1,19 @@
+tests/t3-risk.txt
+  s_347a21bc218ad8::t_ea200b65c9145d 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "208ecc6c6ee32cfc2b62d34a048d07d6d5de6be7",
+  "prompts": {},
+  "sessions": {
+    "s_347a21bc218ad8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_347a21bc218ad8",
+        "model": "unknown"
+      },
+      "human_author": "JiaHeng <5684003+jiaheng@users.noreply.github.com>"
+    }
+  }
+}
