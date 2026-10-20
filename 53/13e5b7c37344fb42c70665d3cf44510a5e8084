@@ -1,0 +1,19 @@
+tests/t2b-request-changes.txt
+  s_8ba10beb345e58::t_b800516bf71986 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "5313e5b7c37344fb42c70665d3cf44510a5e8084",
+  "prompts": {},
+  "sessions": {
+    "s_8ba10beb345e58": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_8ba10beb345e58",
+        "model": "unknown"
+      },
+      "human_author": "JiaHeng <5684003+jiaheng@users.noreply.github.com>"
+    }
+  }
+}
