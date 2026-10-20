@@ -1,0 +1,19 @@
+tests/t2-reject.txt
+  s_5f2fc31772b86d::t_6dcf6501cd10f7 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "580f0458e2ddaa49f594c730693c2151db0560c9",
+  "prompts": {},
+  "sessions": {
+    "s_5f2fc31772b86d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_5f2fc31772b86d",
+        "model": "unknown"
+      },
+      "human_author": "JiaHeng <5684003+jiaheng@users.noreply.github.com>"
+    }
+  }
+}
