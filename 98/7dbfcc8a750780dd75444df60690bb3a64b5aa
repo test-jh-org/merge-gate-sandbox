@@ -1,0 +1,19 @@
+tests/t7-blocklabel.txt
+  s_8d9804bec78248::t_07cfbd197e8c4c 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "987dbfcc8a750780dd75444df60690bb3a64b5aa",
+  "prompts": {},
+  "sessions": {
+    "s_8d9804bec78248": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_8d9804bec78248",
+        "model": "unknown"
+      },
+      "human_author": "JiaHeng <5684003+jiaheng@users.noreply.github.com>"
+    }
+  }
+}
