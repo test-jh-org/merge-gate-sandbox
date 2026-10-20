@@ -1,0 +1,4 @@
+# Every path has a code owner, as on backend repositories under the backend-default-branch
+# ruleset. The author cannot approve their own pull request, so only the gate's ruleset
+# bypass can merge without a second person.
+* @jiaheng

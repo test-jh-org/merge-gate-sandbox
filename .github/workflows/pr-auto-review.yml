@@ -1,8 +1,12 @@
-# Stand-in for the real AI review workflow. It posts the review marker that
-# pr-merge-gate rules R1 and R2 look for: a comment by github-actions[bot]
-# carrying the head SHA, verdict and risk, plus a link to this run.
+# Stand-in for the AI review workflow. It posts the review marker that pr-merge-gate
+# rules R1 and R2 look for: a comment by github-actions[bot] carrying the head SHA,
+# verdict and risk, plus a link to this run.
 #
-# Add the label "review-reject" to a PR to get verdict=REQUEST_CHANGES instead.
+# Labels steer the outcome, for testing:
+#   review-reject       verdict=REQUEST_CHANGES
+#   review-risk-medium  risk=MEDIUM (above the default max_risk LOW)
+#   review-legacy       the marker the real action stamps today: sha only, no verdict or risk
+#   review-skip         no marker at all
 name: pr-auto-review
 on:
   pull_request:
@@ -16,15 +20,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Post review marker
+        if: ${{ !contains(github.event.pull_request.labels.*.name, 'review-skip') }}
         env:
           GH_TOKEN: ${{ github.token }}
           PR: ${{ github.event.pull_request.number }}
           SHA: ${{ github.event.pull_request.head.sha }}
           VERDICT: ${{ contains(github.event.pull_request.labels.*.name, 'review-reject') && 'REQUEST_CHANGES' || 'APPROVE' }}
+          RISK: ${{ contains(github.event.pull_request.labels.*.name, 'review-risk-medium') && 'MEDIUM' || 'LOW' }}
+          LEGACY: ${{ contains(github.event.pull_request.labels.*.name, 'review-legacy') }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
-          gh pr comment "$PR" -R "$GITHUB_REPOSITORY" --body "Automated review (sandbox stub): **$VERDICT**, risk LOW.
+          if [ "$LEGACY" = "true" ]; then
+            marker="<!-- pr-review:sha=$SHA -->"
+            summary="Automated review (sandbox stub, legacy marker)."
+          else
+            marker="<!-- pr-review:sha=$SHA verdict=$VERDICT risk=$RISK -->"
+            summary="Automated review (sandbox stub): **$VERDICT**, risk $RISK."
+          fi
+          gh pr comment "$PR" -R "$GITHUB_REPOSITORY" --body "$summary
 
           Run: $RUN_URL
 
-          <!-- pr-review:sha=$SHA verdict=$VERDICT risk=LOW -->"
+          $marker"
