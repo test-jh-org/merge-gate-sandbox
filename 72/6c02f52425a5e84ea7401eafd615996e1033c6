@@ -1,0 +1,19 @@
+tests/t1-happy.txt
+  s_83058122f7bd74::t_68833b6a78868e 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "726c02f52425a5e84ea7401eafd615996e1033c6",
+  "prompts": {},
+  "sessions": {
+    "s_83058122f7bd74": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_83058122f7bd74",
+        "model": "unknown"
+      },
+      "human_author": "JiaHeng <5684003+jiaheng@users.noreply.github.com>"
+    }
+  }
+}
